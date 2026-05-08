@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKS Digital: Pertemuan 1 - Financial Awareness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f0fdf4; }
+        
+        /* Pengaturan Khusus untuk Hasil Cetak (Print ke PDF) */
+        @media print {
+            body { background-color: #ffffff; }
+            .no-print { display: none !important; }
+            .shadow-sm, .shadow-lg { box-shadow: none !important; }
+            .border-gray-100 { border-color: #e5e7eb !important; border-width: 1px !important; }
+            input, textarea, select { 
+                border: 1px solid #9ca3af !important; 
+                background-color: transparent !important;
+                color: #000 !important;
+                -webkit-appearance: none;
+            }
+            .print-break-inside-avoid { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body class="text-gray-800 pb-20">
+
+    <!-- Header Navigation -->
+    <nav class="bg-green-600 text-white shadow-lg sticky top-0 z-50 no-print">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <!-- Ganti href di bawah ini dengan link eksternal yang Anda inginkan -->
+                <a href="/" class="hover:bg-green-700 p-2 rounded-lg transition-colors" title="Kembali ke Beranda">
+                    <i data-lucide="home" class="w-6 h-6"></i>
+                </a>
+                <h1 class="font-bold text-lg hidden sm:block">LKS Digital MFL - Fase D</h1>
+            </div>
+            <div class="text-sm font-medium bg-green-700 px-3 py-1 rounded-full flex items-center gap-2">
+                <i data-lucide="file-text" class="w-4 h-4"></i> Pertemuan 1
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 mt-6 print:mt-0">
+        
+        <!-- Header Cetak Khusus Print -->
+        <div class="hidden print:block text-center mb-6 pb-4 border-b-2 border-gray-800">
+            <h1 class="text-2xl font-bold uppercase">Lembar Kerja Siswa (LKS) - Fase D</h1>
+            <h2 class="text-lg font-semibold text-gray-700">Matematika Terintegrasi Literasi Finansial (MFL)</h2>
+            <p class="text-sm text-gray-500">Pertemuan 1: Financial Awareness</p>
+        </div>
+
+        <!-- Identitas Siswa -->
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-8 print-break-inside-avoid">
+            <h2 class="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
+                <i data-lucide="users" class="text-green-600"></i> Identitas Kelompok
+            </h2>
+            <p class="text-gray-500 text-sm mb-4">Isi nama lengkap anggota kelompok beserta kelas.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Nama Anggota Kelompok:</label>
+                    <textarea class="w-full border-gray-300 rounded-lg shadow-sm focus:border-green-500 focus:ring-green-500 p-2 border" rows="3" placeholder="1. ...&#10;2. ...&#10;3. ..."></textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Kelas:</label>
+                    <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-green-500 focus:ring-green-500 p-2 border" placeholder="Contoh: VIII A">
+                </div>
+            </div>
+        </section>
+
+        <!-- AKTIVITAS 1 -->
+        <div class="bg-blue-600 text-white p-4 rounded-t-2xl mt-8 print:bg-gray-800 print:text-white print-break-inside-avoid">
+            <h2 class="text-xl font-bold uppercase tracking-wide flex items-center gap-2">
+                <i data-lucide="search"></i> Aktivitas 1: The Auditor
+            </h2>
+            <p class="text-blue-100 print:text-gray-300 text-sm mt-1">Gunakan kemampuan operasi bilangan bulatmu untuk menemukan kesalahan hitung dan menyelamatkan uang yang hilang! (Kredit = +, Debit = -)</p>
+        </div>
+
+        <!-- Bagian 1: Tabungan -->
+        <section class="bg-white p-6 shadow-sm border border-gray-100 mb-6 rounded-b-2xl print-break-inside-avoid">
+            <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2">Bagian 1: Investigasi Buku Tabungan</h3>
+            
+            <div class="mb-4 bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-yellow-800 font-medium flex gap-2 items-start print:border-gray-400 print:bg-white print:text-black">
+                <i data-lucide="pen-tool" class="w-5 h-5 flex-shrink-0"></i>
+                <p><strong>Arahan:</strong> Tuliskan proses hitung-hitunganmu di kertas selembar untuk dikumpulkan ke guru!</p>
+            </div>
+
+            <div class="overflow-x-auto mb-4">
+                <table class="w-full text-sm text-left text-gray-500 border print:text-black">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 print:bg-gray-200">
+                        <tr>
+                            <th class="px-4 py-2 border">TGL</th>
+                            <th class="px-4 py-2 border">SANDI TRANSAKSI</th>
+                            <th class="px-4 py-2 border">DEBET (-)</th>
+                            <th class="px-4 py-2 border">KREDIT (+)</th>
+                            <th class="px-4 py-2 border">SALDO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white"><td class="px-4 py-2 border">01/02/24</td><td class="px-4 py-2 border">SALDO AWAL</td><td class="px-4 py-2 border"></td><td class="px-4 py-2 border"></td><td class="px-4 py-2 border font-bold">500.000</td></tr>
+                        <tr class="bg-gray-50 print:bg-white"><td class="px-4 py-2 border">05/02/24</td><td class="px-4 py-2 border">SETOR TUNAI</td><td class="px-4 py-2 border"></td><td class="px-4 py-2 border text-green-600 print:text-black">200.000</td><td class="px-4 py-2 border font-bold">700.000</td></tr>
+                        <tr class="bg-white"><td class="px-4 py-2 border text-red-500 font-bold print:text-black">10/02/24</td><td class="px-4 py-2 border text-red-500 font-bold print:text-black">TARIK TUNAI ATM</td><td class="px-4 py-2 border text-red-600 font-bold print:text-black">100.000</td><td class="px-4 py-2 border"></td><td class="px-4 py-2 border font-bold bg-red-100 print:bg-white">800.000 (??)</td></tr>
+                        <tr class="bg-gray-50 print:bg-white"><td class="px-4 py-2 border">15/02/24</td><td class="px-4 py-2 border">BUNGA BANK</td><td class="px-4 py-2 border"></td><td class="px-4 py-2 border text-green-600 print:text-black">5.000</td><td class="px-4 py-2 border font-bold">805.000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-1">1. Jika uang ditarik (Tarik Tunai), saldonya seharusnya...</label>
+                    <select class="border p-2 rounded w-full md:w-1/2 print:appearance-none print:border-gray-400">
+                        <option value="">-- Jawab di sini --</option>
+                        <option value="Bertambah">Bertambah</option>
+                        <option value="Berkurang">Berkurang</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">2. Pada tanggal 10/02/24, operasi hitung apa yang salah dilakukan oleh sistem bank?</label>
+                    <input type="text" class="border p-2 rounded w-full print:border-gray-400" placeholder="Jelaskan kesalahan sistem...">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">3. Berapa seharusnya Saldo Akhir yang benar pada tanggal 15/02/24 setelah perbaikan?</label>
+                    <div class="flex items-center gap-2">
+                        <span class="font-bold">Rp</span>
+                        <input type="text" class="border p-2 rounded w-full md:w-1/3 print:border-gray-400" placeholder="Tuliskan nominal...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian 2: Dompet Digital -->
+        <section class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 mb-6 print-break-inside-avoid">
+            <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2">Bagian 2: Detektif Dompet Digital</h3>
+            
+            <div class="mb-4 bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-yellow-800 font-medium flex gap-2 items-start print:border-gray-400 print:bg-white print:text-black">
+                <i data-lucide="pen-tool" class="w-5 h-5 flex-shrink-0"></i>
+                <p><strong>Arahan:</strong> Tuliskan proses perhitungannya secara matematis di kertas masing-masing!</p>
+            </div>
+
+            <div class="bg-gray-800 text-white p-5 rounded-xl max-w-sm mx-auto mb-6 shadow-lg print:bg-white print:text-black print:border print:shadow-none">
+                <div class="text-center mb-4 border-b border-gray-600 print:border-gray-300 pb-2">
+                    <p class="text-gray-400 print:text-gray-600 text-sm">Total Saldo Saat Ini</p>
+                    <h4 class="text-3xl font-bold">Rp 45.000</h4>
+                </div>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between"><span class="flex items-center gap-2"><i data-lucide="arrow-up-circle" class="w-4 h-4 text-green-400 print:text-black"></i> Cashback Promo</span> <span class="text-green-400 print:text-black">+ Rp 5.000</span></li>
+                    <li class="flex justify-between"><span class="flex items-center gap-2"><i data-lucide="arrow-down-circle" class="w-4 h-4 text-red-400 print:text-black"></i> Top Up Game</span> <span class="text-red-400 print:text-black">- Rp 20.000</span></li>
+                    <li class="flex justify-between"><span class="flex items-center gap-2"><i data-lucide="arrow-down-circle" class="w-4 h-4 text-red-400 print:text-black"></i> Kopi Kenangan</span> <span class="text-red-400 print:text-black">- Rp 25.000</span></li>
+                    <li class="flex justify-between"><span class="flex items-center gap-2"><i data-lucide="arrow-up-circle" class="w-4 h-4 text-green-400 print:text-black"></i> Top Up via ATM</span> <span class="text-green-400 print:text-black">+ Rp 100.000</span></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-1">1. Asumsikan saldo awal Andi adalah 0. Hitung manual transaksi di atas. Berapa sisa uang yang seharusnya?</label>
+                    <div class="flex items-center gap-2">
+                        <span class="font-bold">Rp</span>
+                        <input type="text" class="border p-2 rounded w-full md:w-1/3 print:border-gray-400" placeholder="...">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">2. Berapa Rupiah uang Andi yang hilang (selisih hitungan benarmu dengan saldo di layar)?</label>
+                    <div class="flex items-center gap-2">
+                        <span class="font-bold">Rp</span>
+                        <input type="text" class="border p-2 rounded w-full md:w-1/3 print:border-gray-400" placeholder="...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian 3: Struk Kasir -->
+        <section class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 mb-6 print-break-inside-avoid">
+            <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2">Bagian 3: Audit Struk Belanja (Kasir Error)</h3>
+            
+            <div class="mb-4 bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-yellow-800 font-medium flex gap-2 items-start print:border-gray-400 print:bg-white print:text-black">
+                <i data-lucide="pen-tool" class="w-5 h-5 flex-shrink-0"></i>
+                <p><strong>Arahan:</strong> Tuliskan ulang perkalian yang benar di kertasmu!</p>
+            </div>
+
+            <div class="bg-gray-50 p-4 font-mono text-sm border-dashed border-2 border-gray-300 mb-4 max-w-sm print:bg-white print:border-gray-500">
+                <p class="text-center font-bold mb-2">MINIMARKET POINT</p>
+                <div class="flex justify-between border-b border-gray-400 border-dashed pb-1 mb-1"><span>ITEM / QTY</span><span>SUBTOT</span></div>
+                <div class="flex justify-between"><span>Roti Tawar 2x 12.000</span><span>24.000</span></div>
+                <div class="flex justify-between text-red-600 bg-red-50 font-bold print:text-black print:bg-white"><span>Susu UHT 3x 6.000</span><span>28.000</span></div>
+                <div class="flex justify-between"><span>Coklat 1x 10.000</span><span>10.000</span></div>
+                <div class="flex justify-between border-t border-gray-400 border-dashed pt-1 mt-1 font-bold"><span>TOTAL</span><span>62.000</span></div>
+            </div>
+            
+            <div class="space-y-3">
+                <div>
+                    <label class="block text-sm font-medium">1. Barang yang salah hitung (hasil perkalian salah):</label>
+                    <input type="text" class="border p-2 rounded w-full md:w-1/2 text-sm print:border-gray-400" placeholder="Nama barang...">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium">2. Berapa harga subtotal yang benar untuk barang tersebut?</label>
+                    <div class="flex items-center gap-2"><span class="font-bold text-sm">Rp</span><input type="text" class="border p-2 rounded w-full md:w-1/2 text-sm print:border-gray-400" placeholder="..."></div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium">3. Hitung Total Belanja yang seharusnya kamu bayar!</label>
+                    <div class="flex items-center gap-2"><span class="font-bold text-sm">Rp</span><input type="text" class="border p-2 rounded w-full md:w-1/2 text-sm print:border-gray-400" placeholder="..."></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian 4: Kas Kelas -->
+        <section class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 mb-8 print-break-inside-avoid">
+            <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2">Bagian 4: The Final Audit (Laporan Kas Kelas)</h3>
+            <p class="text-sm text-gray-600 mb-4 print:text-black">Bendahara kelas menyerahkan laporan kas berikut. Saldo akhir tertulis Rp 550.000. Temukan kesalahan logika berpikir bendahara!</p>
+            
+            <div class="mb-4 bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-yellow-800 font-medium flex gap-2 items-start print:border-gray-400 print:bg-white print:text-black">
+                <i data-lucide="pen-tool" class="w-5 h-5 flex-shrink-0"></i>
+                <p><strong>Arahan:</strong> Tuliskan ulang hitungan yang benar per baris pada kertas jawabanmu sebelum menyalin hasil akhirnya di bawah.</p>
+            </div>
+
+            <!-- Tabel Kas Kelas -->
+            <div class="overflow-x-auto mb-6">
+                <table class="w-full text-sm text-left text-gray-700 border print:text-black">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-100 print:bg-gray-200">
+                        <tr>
+                            <th class="px-3 py-2 border">No</th>
+                            <th class="px-3 py-2 border">Keterangan</th>
+                            <th class="px-3 py-2 border">Masuk</th>
+                            <th class="px-3 py-2 border">Keluar</th>
+                            <th class="px-3 py-2 border">Saldo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="px-3 py-2 border">1</td><td class="px-3 py-2 border">Saldo Awal</td><td class="px-3 py-2 border text-center">-</td><td class="px-3 py-2 border text-center">-</td><td class="px-3 py-2 border font-bold">500.000</td></tr>
+                        <tr class="bg-red-50 print:bg-white"><td class="px-3 py-2 border">2</td><td class="px-3 py-2 border">Iuran Siswa</td><td class="px-3 py-2 border">300.000</td><td class="px-3 py-2 border text-center">-</td><td class="px-3 py-2 border font-bold text-red-600 print:text-black">200.000</td></tr>
+                        <tr class="bg-red-50 print:bg-white"><td class="px-3 py-2 border">3</td><td class="px-3 py-2 border">Beli Dekorasi</td><td class="px-3 py-2 border text-center">-</td><td class="px-3 py-2 border">150.000</td><td class="px-3 py-2 border font-bold text-red-600 print:text-black">50.000</td></tr>
+                        <tr class="bg-red-50 print:bg-white"><td class="px-3 py-2 border">4</td><td class="px-3 py-2 border">Sumbangan Wali Murid</td><td class="px-3 py-2 border">500.000</td><td class="px-3 py-2 border text-center">-</td><td class="px-3 py-2 border font-bold text-red-600 print:text-black">550.000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Area Perbaikan -->
+            <p class="font-bold mb-3 text-sm text-gray-800">Perbaikan Laporan: Bantu bendahara memperbaiki kolom SALDO.</p>
+            <div class="space-y-4 text-sm bg-gray-50 p-5 rounded-lg border print:bg-white print:border-gray-400">
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="font-bold w-full md:w-48">• Baris 2 (Iuran Siswa):</span>
+                    <span>500.000 + 300.000 = </span>
+                    <input type="text" class="border border-gray-300 p-1.5 rounded w-32 focus:ring-blue-500 focus:border-blue-500 print:border-gray-500" placeholder="...">
+                    <span class="text-gray-500 italic ml-2">(Saldo baru)</span>
+                </div>
+                
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="font-bold w-full md:w-48">• Baris 3 (Beli Dekorasi):</span>
+                    <input type="text" class="border border-gray-300 p-1.5 rounded w-32 focus:ring-blue-500 focus:border-blue-500 print:border-gray-500" placeholder="...">
+                    <span> - 150.000 = </span>
+                    <input type="text" class="border border-gray-300 p-1.5 rounded w-32 focus:ring-blue-500 focus:border-blue-500 print:border-gray-500" placeholder="...">
+                    <span class="text-gray-500 italic ml-2">(Saldo baru)</span>
+                </div>
+                
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="font-bold w-full md:w-48">• Baris 4 (Sumbangan):</span>
+                    <input type="text" class="border border-gray-300 p-1.5 rounded w-32 focus:ring-blue-500 focus:border-blue-500 print:border-gray-500" placeholder="...">
+                    <span> + 500.000 = </span>
+                    <input type="text" class="border border-gray-300 p-1.5 rounded w-32 focus:ring-blue-500 focus:border-blue-500 print:border-gray-500" placeholder="...">
+                    <span class="text-gray-500 italic ml-2">(Saldo Akhir Benar)</span>
+                </div>
+            </div>
+
+            <div class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg print:bg-white print:border-gray-800 print:border-2">
+                <span class="font-bold text-blue-900 block mb-2 uppercase tracking-wide">KESIMPULAN AUDITOR</span>
+                <div class="flex items-center gap-3">
+                    <span class="text-base font-medium">Saldo Akhir yang benar adalah Rp</span>
+                    <input type="text" class="border-b-2 border-gray-400 bg-transparent p-1 w-48 font-bold text-lg focus:outline-none focus:border-blue-600 print:border-black" placeholder="...">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- AKTIVITAS 2 -->
+        <div class="bg-emerald-600 text-white p-4 rounded-t-2xl mt-12 print:bg-gray-800 print:text-white print-break-inside-avoid">
+            <h2 class="text-xl font-bold uppercase tracking-wide flex items-center gap-2">
+                <i data-lucide="shopping-cart"></i> Aktivitas 2: The Smart Shopper
+            </h2>
+            <p class="text-emerald-100 print:text-gray-300 text-sm mt-1">Jangan terburu-buru melihat diskon! Hitung nilai asli di balik angka persen dan syarat tersembunyi.</p>
+        </div>
+
+        <!-- Bagian 1: Perang Diskon -->
+        <section class="bg-white p-6 shadow-sm border border-gray-100 mb-6 rounded-b-2xl print-break-inside-avoid">
+            <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2">Bagian 1: Perang Diskon (Baju Lebaran Rp 200.000)</h3>
+            
+            <div class="mb-4 bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-yellow-800 font-medium flex gap-2 items-start print:border-gray-400 print:bg-white print:text-black">
+                <i data-lucide="pen-tool" class="w-5 h-5 flex-shrink-0"></i>
+                <p><strong>Arahan:</strong> Hitung manual proses potongan diskon per lapis di kertasmu!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <!-- Toko A -->
+                <div class="border-2 border-dashed border-red-300 rounded-xl p-4 bg-red-50 relative print:bg-white print:border-gray-400">
+                    <span class="absolute top-0 right-0 bg-red-500 text-white text-xs px-2 py-1 rounded-bl-lg rounded-tr-lg print:bg-black print:text-white">Toko A</span>
+                    <h4 class="font-bold text-red-600 text-xl text-center mb-2 print:text-black">DISKON 50% + 20%</h4>
+                    <div class="space-y-3 text-sm mt-4">
+                        <div class="flex justify-between items-center">
+                            <span>Diskon Pertama (50%):</span>
+                            <div class="flex items-center"><span class="mr-1">Rp</span><input type="text" class="border p-1 w-24 rounded print:border-gray-400" placeholder="..."></div>
+                        </div>
+                        <div class="flex justify-between items-center text-gray-600 print:text-black">
+                            <span>Sisa Harga:</span>
+                            <div class="flex items-center"><span class="mr-1">Rp</span><input type="text" class="border p-1 w-24 rounded print:border-gray-400" placeholder="..."></div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Diskon Kedua (20% dr sisa):</span>
+                            <div class="flex items-center"><span class="mr-1">Rp</span><input type="text" class="border p-1 w-24 rounded print:border-gray-400" placeholder="..."></div>
+                        </div>
+                        <hr class="border-red-200 print:border-gray-400">
+                        <div class="flex justify-between items-center font-bold text-red-700 print:text-black">
+                            <span>Harga Akhir Toko A:</span>
+                            <div class="flex items-center"><span class="mr-1">Rp</span><input type="text" class="border p-1 w-24 rounded shadow-sm print:border-gray-400" placeholder="..."></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toko B -->
+                <div class="border-2 border-dashed border-green-300 rounded-xl p-4 bg-green-50 relative print:bg-white print:border-gray-400">
+                    <span class="absolute top-0 right-0 bg-green-500 text-white text-xs px-2 py-1 rounded-bl-lg rounded-tr-lg print:bg-black print:text-white">Toko B</span>
+                    <h4 class="font-bold text-green-600 text-xl text-center mb-2 print:text-black">DISKON 60% OFF</h4>
+                    <div class="space-y-3 text-sm mt-4">
+                        <div class="flex justify-between items-center">
+                            <span>Nilai Diskon (60%):</span>
+                            <div class="flex items-center"><span class="mr-1">Rp</span><input type="text" class="border p-1 w-24 rounded print:border-gray-400" placeholder="..."></div>
+                        </div>
+                        <br><br><br>
+                        <hr class="border-green-200 print:border-gray-400">
+                        <div class="flex justify-between items-center font-bold text-green-700 print:text-black">
+                            <span>Harga Akhir Toko B:</span>
+                            <div class="flex items-center"><span class="mr-1">Rp</span><input type="text" class="border p-1 w-24 rounded shadow-sm print:border-gray-400" placeholder="..."></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <span class="font-medium text-sm block mb-2">Kesimpulan: Toko manakah yang lebih murah?</span>
+                <select class="border p-2 rounded w-full md:w-1/2 print:appearance-none print:border-gray-400">
+                    <option value="">-- Pilih --</option>
+                    <option value="Toko A">Toko A</option>
+                    <option value="Toko B">Toko B</option>
+                    <option value="Sama">Keduanya Sama Murah</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Bagian 2: Jebakan Voucher -->
+        <section class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 mb-6 print-break-inside-avoid">
+            <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2">Bagian 2: Jebakan Voucher (Pesanan Rp 40.000)</h3>
+            
+            <div class="mb-4 bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-yellow-800 font-medium flex gap-2 items-start print:border-gray-400 print:bg-white print:text-black">
+                <i data-lucide="pen-tool" class="w-5 h-5 flex-shrink-0"></i>
+                <p><strong>Arahan:</strong> Tulis hitungan persentase vouchernya di kertas!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div class="border p-4 rounded-lg">
+                    <h4 class="font-bold text-blue-600 mb-2 print:text-black">Voucher X</h4>
+                    <p class="text-sm bg-blue-50 p-2 rounded print:bg-white print:border">Diskon 50%<br><span class="text-xs text-red-500 font-bold print:text-black">*Maksimal potongan Rp 10.000</span></p>
+                    <p class="text-sm mt-2">Hitungan 50%: Rp 20.000.<br>Tapi karena ada aturan maksimal, potongan aslinya hanya:</p>
+                    <div class="flex items-center mt-2"><span class="font-bold mr-2 text-sm">Rp</span><input type="text" class="border p-1 rounded w-32 print:border-gray-400" placeholder="..."></div>
+                </div>
+                <div class="border p-4 rounded-lg">
+                    <h4 class="font-bold text-orange-600 mb-2 print:text-black">Voucher Y</h4>
+                    <p class="text-sm bg-orange-50 p-2 rounded print:bg-white print:border">Diskon 30%<br><span class="text-xs text-green-600 font-bold print:text-black">*Tanpa maksimal potongan</span></p>
+                    <p class="text-sm mt-2">Hitungan 30%: 30/100 x 40.000 = <br>Maka potongannya utuh sebesar:</p>
+                    <div class="flex items-center mt-2"><span class="font-bold mr-2 text-sm">Rp</span><input type="text" class="border p-1 rounded w-32 print:border-gray-400" placeholder="..."></div>
+                </div>
+            </div>
+            
+            <div class="border-t pt-4">
+                <label class="block text-sm font-medium mb-2">Keputusan: Voucher mana yang paling menguntungkan (bayar paling sedikit)?</label>
+                <select class="border p-2 rounded w-full md:w-1/2 print:appearance-none print:border-gray-400">
+                    <option value="">-- Pilih Voucher --</option>
+                    <option value="X">Voucher X</option>
+                    <option value="Y">Voucher Y</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Bagian 3: PayLater -->
+        <section class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 mb-10 print-break-inside-avoid">
+            <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center justify-between">
+                <span>Bagian 3: The PayLater Trap</span>
+                <span class="text-xs font-normal bg-purple-100 text-purple-700 px-2 py-1 rounded print:bg-white print:border print:text-black">Tugas Bernalar Kritis</span>
+            </h3>
+
+            <div class="mb-4 bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-yellow-800 font-medium flex gap-2 items-start print:border-gray-400 print:bg-white print:text-black">
+                <i data-lucide="pen-tool" class="w-5 h-5 flex-shrink-0"></i>
+                <p><strong>Arahan:</strong> Tuliskan logika berpikir matematis dan alasanmu (essay) di kertas selembar dengan rapi!</p>
+            </div>
+            
+            <div class="bg-gray-50 p-4 border rounded-xl mb-4 flex flex-col md:flex-row gap-4 print:bg-white">
+                <div class="md:w-1/3 text-center md:text-left">
+                    <img src="https://api.dicebear.com/7.x/shapes/svg?seed=shoes&backgroundColor=f3f4f6" alt="Sepatu" class="w-24 h-24 mx-auto md:mx-0 rounded-lg shadow-sm border mb-2">
+                    <p class="font-bold">Sepatu Sekolah</p>
+                    <p class="text-gray-600">Rp 500.000</p>
+                </div>
+                <div class="md:w-2/3 text-sm flex flex-col justify-center">
+                    <p class="mb-2"><strong>Uang di tabunganmu:</strong> Rp 500.000 (Pas-pasan).</p>
+                    <p class="mb-1"><strong>Opsi Pembayaran:</strong></p>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Tunai: Bayar Rp 500.000 sekarang. Tabungan habis.</li>
+                        <li>PayLater: Bayar bulan depan. Bunga 5% + Biaya Layanan Rp 5.000. Tabungan utuh hari ini.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="space-y-4 text-sm">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block font-medium mb-1">1. Hitung Bunga (5% dari 500.000):</label>
+                        <div class="flex items-center"><span class="mr-2">Rp</span><input type="text" class="border p-2 rounded w-full print:border-gray-400" placeholder="..."></div>
+                    </div>
+                    <div>
+                        <label class="block font-medium mb-1">Total Tagihan Bulan Depan (Sepatu + Bunga + 5000):</label>
+                        <div class="flex items-center"><span class="mr-2 text-red-600 font-bold print:text-black">Rp</span><input type="text" class="border p-2 rounded w-full border-red-300 bg-red-50 print:bg-white print:border-gray-400" placeholder="..."></div>
+                    </div>
+                </div>
+                
+                <div class="pt-2">
+                    <label class="block font-medium mb-1">2. Berapa rupiah uangmu yang "hilang" sia-sia untuk menunda pembayaran?</label>
+                    <div class="flex items-center"><span class="mr-2">Rp</span><input type="text" class="border p-2 rounded w-48 print:border-gray-400" placeholder="..."></div>
+                </div>
+
+                <div class="pt-4 border-t mt-4">
+                    <label class="block font-medium text-base mb-2 text-gray-800">3. Pengambilan Keputusan (Essay):</label>
+                    <p class="text-gray-500 mb-2 print:text-black">Jika kamu di posisi ini, apakah kamu akan memilih Tunai atau PayLater? Jelaskan alasanmu secara matematis dan logis!</p>
+                    <textarea class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-green-500 h-24 print:border-gray-400" placeholder="Tuliskan argumenmu di sini..."></textarea>
+                </div>
+            </div>
+            
+            <div class="mt-6 text-center italic text-gray-500 border-t pt-4 text-sm print:text-black">
+                "Kekayaan bukan hanya soal berapa banyak uang yang kamu miliki, tapi berapa banyak uang yang tidak kamu habiskan untuk biaya yang tidak perlu."
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Tombol Mengambang (Floating Action Button) untuk Cetak PDF -->
+    <button onclick="window.print()" class="no-print fixed bottom-6 right-6 bg-blue-600 text-white px-5 py-3 rounded-full shadow-2xl hover:bg-blue-700 font-bold flex items-center gap-2 z-50 transition transform hover:scale-105">
+        <i data-lucide="printer" class="w-5 h-5"></i> Simpan ke PDF / Cetak
+    </button>
+
+    <!-- Script Inisialisasi Ikon Saja -->
+    <script>
+        // Inisialisasi Ikon Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>

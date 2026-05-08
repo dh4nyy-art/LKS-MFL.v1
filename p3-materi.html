@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKS Digital: Pertemuan 3 - Wealth & Obligations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #ecfdf5; } /* Latar belakang hijau sangat muda */
+        
+        /* Pengaturan Khusus untuk Hasil Cetak (Print ke PDF) */
+        @media print {
+            body { background-color: #ffffff; }
+            .no-print { display: none !important; }
+            .shadow-sm, .shadow-lg { box-shadow: none !important; }
+            .border-gray-100 { border-color: #e5e7eb !important; border-width: 1px !important; }
+            input, textarea, select { 
+                border: 1px solid #9ca3af !important; 
+                background-color: transparent !important;
+                color: #000 !important;
+                -webkit-appearance: none;
+            }
+            .print-break-inside-avoid { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body class="text-gray-800 pb-20">
+
+    <!-- Header Navigation -->
+    <nav class="bg-emerald-600 text-white shadow-lg sticky top-0 z-50 no-print">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="/" class="hover:bg-emerald-700 p-2 rounded-lg transition-colors" title="Kembali ke Beranda">
+                    <i data-lucide="home" class="w-6 h-6"></i>
+                </a>
+                <h1 class="font-bold text-lg hidden sm:block">LKS Digital MFL - Fase D</h1>
+            </div>
+            <div class="text-sm font-medium bg-emerald-700 px-3 py-1 rounded-full flex items-center gap-2">
+                <i data-lucide="clock" class="w-4 h-4"></i> Pertemuan 3
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 mt-6 print:mt-0">
+        
+        <!-- Header Cetak Khusus Print -->
+        <div class="hidden print:block text-center mb-6 pb-4 border-b-2 border-gray-800">
+            <h1 class="text-2xl font-bold uppercase">Lembar Kerja Siswa (LKS) - Fase D</h1>
+            <h2 class="text-lg font-semibold text-gray-700">Matematika Terintegrasi Literasi Finansial (MFL)</h2>
+            <p class="text-sm text-gray-500">Pertemuan 3: Wealth & Obligations (Wealth Manager)</p>
+        </div>
+
+        <!-- Identitas Siswa -->
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-8 print-break-inside-avoid">
+            <div class="flex flex-col md:flex-row justify-between md:items-center mb-4 gap-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 flex items-center gap-2">
+                        <i data-lucide="users" class="text-emerald-600"></i> Identitas Kelompok
+                    </h2>
+                    <p class="text-gray-500 text-sm mt-1">Misi: Wealth Manager</p>
+                </div>
+                <div class="bg-emerald-50 text-emerald-800 text-xs px-3 py-2 rounded-lg border border-emerald-200 print:border-gray-400 print:bg-white print:text-black">
+                    <strong>Peran Ganda:</strong> Konsultan Pajak & Analis Saham.
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Nama Anggota Kelompok:</label>
+                    <textarea class="w-full border-gray-300 rounded-lg shadow-sm focus:border-emerald-500 focus:ring-emerald-500 p-2 border" rows="3" placeholder="1. ...&#10;2. ...&#10;3. ..."></textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Kelas:</label>
+                    <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-emerald-500 focus:ring-emerald-500 p-2 border" placeholder="Contoh: VIII C">
+                </div>
+            </div>
+        </section>
+
+        <!-- AKTIVITAS 1: Tax Consultant -->
+        <div class="bg-emerald-600 text-white p-4 rounded-t-2xl mt-8 print:bg-gray-800 print:text-white print-break-inside-avoid">
+            <h2 class="text-xl font-bold uppercase tracking-wide flex items-center gap-2">
+                <i data-lucide="file-text"></i> Aktivitas 1: Tax Consultant (Model PLSV)
+            </h2>
+            <p class="text-emerald-100 print:text-gray-300 text-sm mt-1">Fokus Matematika: Persamaan Linear Satu Variabel <span class="font-mono bg-emerald-800 px-1 rounded text-xs">y = m(x - c)</span></p>
+        </div>
+
+        <section class="bg-white p-6 shadow-sm border-x border-t border-gray-100 print-break-inside-avoid">
+            <h3 class="font-bold text-gray-800 mb-2 border-b pb-2">Bagian A: Pajak Bumi & Bangunan (PBB) - Kasus Pak Budi</h3>
+            <p class="text-sm text-gray-700 mb-4 print:text-black">Sebagai Konsultan Pajak, kamu harus memastikan perhitungan kewajiban warga negara dilakukan dengan adil. Pak Budi baru saja membeli rumah pertamanya.</p>
+            
+            <!-- Box Info -->
+            <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 mb-6 flex items-start gap-4 print:bg-white print:border-gray-500">
+                <div class="bg-emerald-100 p-3 rounded-full print:hidden">
+                    <i data-lucide="landmark" class="w-6 h-6 text-emerald-700"></i>
+                </div>
+                <div class="w-full">
+                    <h3 class="font-bold text-emerald-900 mb-2 print:text-black">DATA PROPERTI & ATURAN PBB:</h3>
+                    <ul class="text-sm text-emerald-800 space-y-2 print:text-black">
+                        <li><strong>Nilai Tanah + Bangunan (NJOP):</strong> Rp 500.000.000 <span class="bg-white px-2 py-0.5 rounded border text-xs ml-1 font-mono text-gray-600">(Variabel x)</span></li>
+                        <li><strong>Tarif Pajak (m):</strong> 0,2% atau <span class="font-mono bg-white px-1 rounded border">0,002</span></li>
+                        <li><strong>Keringanan Pemerintah (NJOPTKP):</strong> Rp 60.000.000 <span class="bg-white px-2 py-0.5 rounded border text-xs ml-1 font-mono text-gray-600">(Konstanta c)</span></li>
+                    </ul>
+                    <p class="mt-3 text-xs bg-emerald-100 p-2 rounded text-emerald-900 font-medium print:bg-white print:border print:border-gray-400">
+                        *Konsep Keadilan: Pajak hanya dikenakan pada <strong>sisa nilai</strong> setelah dikurangi Batas Tidak Kena Pajak (NJOPTKP).
+                    </p>
+                </div>
+            </div>
+
+            <div class="mb-5 bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-yellow-800 font-medium flex gap-2 items-start print:border-gray-400 print:bg-white print:text-black">
+                <i data-lucide="pen-tool" class="w-5 h-5 flex-shrink-0"></i>
+                <p><strong>Arahan:</strong> Mari kita masukkan angka-angka di atas ke dalam Model Matematika Aljabar. Kerjakan urutan perhitungannya dengan teliti!</p>
+            </div>
+
+            <div class="space-y-4 text-sm bg-gray-50 p-5 rounded-lg border print:bg-white print:border-gray-400 mb-6">
+                <div class="mb-2">
+                    <span class="font-bold text-gray-700 block mb-1">1. Model Matematika:</span>
+                    <p class="font-mono bg-white p-2 border rounded shadow-sm print:shadow-none text-center">Pajak (y) = Tarif (m) × [ Total Nilai (x) - Batas Keringanan (c) ]</p>
+                </div>
+                
+                <div class="mt-4">
+                    <span class="font-bold text-gray-700 block mb-2">2. Hitung Pajak Pak Budi:</span>
+                    <div class="space-y-3 font-mono pl-4 md:pl-8 border-l-2 border-emerald-300 print:border-gray-400">
+                        <!-- Baris 1 -->
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+                            <span class="w-8">y =</span>
+                            <span>0,002 × (</span>
+                            <input type="text" class="border p-1 rounded w-32 print:border-gray-400" value="500.000.000" readonly>
+                            <span>-</span>
+                            <input type="text" class="border p-1 rounded w-32 print:border-gray-400" value="60.000.000" readonly>
+                            <span>)</span>
+                        </div>
+                        <!-- Baris 2 -->
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+                            <span class="w-8">y =</span>
+                            <span>0,002 × (</span>
+                            <input type="text" class="border p-1 rounded w-40 bg-white focus:ring-emerald-500 focus:border-emerald-500 print:border-gray-400" placeholder="Hasil Pengurangan">
+                            <span>)</span>
+                        </div>
+                        <!-- Baris 3 -->
+                        <div class="flex items-center gap-2">
+                            <span class="w-8">y =</span>
+                            <span class="font-bold text-lg">Rp</span>
+                            <input type="text" class="border-b-2 border-gray-400 bg-transparent p-1 w-40 font-bold focus:outline-none focus:border-emerald-600 print:border-black" placeholder="Total Pajak">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian B: Pajak Penghasilan (PPh 21) -->
+        <section class="bg-white p-6 shadow-sm border border-gray-100 mb-6 rounded-b-2xl print-break-inside-avoid border-t-0">
+            <h3 class="font-bold text-gray-800 mb-2 border-b pb-2">Bagian B: Pajak Penghasilan (PPh 21) - Kasus Kak Sarah</h3>
+            <p class="text-sm text-gray-700 mb-4 print:text-black">Kak Sarah adalah seorang karyawan baru (Fresh Graduate). Ia ingin tahu berapa pajak gaji yang harus ia bayar setahun.</p>
+
+            <!-- Box Info -->
+            <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 mb-6 flex items-start gap-4 print:bg-white print:border-gray-500">
+                <div class="bg-emerald-100 p-3 rounded-full print:hidden">
+                    <i data-lucide="briefcase" class="w-6 h-6 text-emerald-700"></i>
+                </div>
+                <div class="w-full">
+                    <h3 class="font-bold text-emerald-900 mb-2 print:text-black">DATA KEUANGAN & ATURAN PPh 21:</h3>
+                    <ul class="text-sm text-emerald-800 space-y-2 print:text-black">
+                        <li><strong>Gaji Bruto Setahun (x):</strong> Rp 100.000.000 <span class="bg-white px-2 py-0.5 rounded border text-xs ml-1 font-mono text-gray-600">(Variabel x)</span></li>
+                        <li><strong>Tarif Pajak (m):</strong> 5% atau <span class="font-mono bg-white px-1 rounded border">0,05</span> untuk lapis pertama.</li>
+                        <li><strong>Keringanan (PTKP):</strong> Rp 54.000.000 <span class="bg-white px-2 py-0.5 rounded border text-xs ml-1 font-mono text-gray-600">(Konstanta c)</span></li>
+                    </ul>
+                    <p class="mt-3 text-xs bg-emerald-100 p-2 rounded text-emerald-900 font-medium print:bg-white print:border print:border-gray-400">
+                        *Aturan Main: Sama seperti PBB, gaji tidak langsung dipajaki semua. Ada bagian yang "dilindungi" untuk biaya hidup dasar (PTKP).
+                    </p>
+                </div>
+            </div>
+
+            <div class="mb-5 bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-yellow-800 font-medium flex gap-2 items-start print:border-gray-400 print:bg-white print:text-black">
+                <i data-lucide="pen-tool" class="w-5 h-5 flex-shrink-0"></i>
+                <p><strong>Arahan:</strong> Tuliskan proses perhitungannya dan jawaban analisismu di kertas!</p>
+            </div>
+
+            <h3 class="font-bold text-gray-800 mb-3">Tugas B (Tantangan Variasi):</h3>
+            <div class="space-y-6 text-sm bg-gray-50 p-5 rounded-lg border print:bg-white print:border-gray-400 mb-6">
+                <!-- 1. Bentuk Persamaan -->
+                <div>
+                    <span class="font-bold text-gray-700 block mb-2">1. Bentuk Persamaan:</span>
+                    <div class="space-y-2 font-mono pl-4 border-l-2 border-emerald-300 print:border-gray-400">
+                        <div>y = m × (x - c)</div>
+                        <div class="flex items-center gap-2">
+                            <span>y = 0,05 × ( x - </span>
+                            <input type="text" class="border p-1 rounded w-32 print:border-gray-400" placeholder="...">
+                            <span>)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Hitung Pajak -->
+                <div>
+                    <span class="font-bold text-gray-700 block mb-2">2. Hitung Pajak Kak Sarah:</span>
+                    <div class="space-y-3 font-mono pl-4 border-l-2 border-emerald-300 print:border-gray-400">
+                        <div>y = 0,05 × (100.000.000 - 54.000.000)</div>
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+                            <span class="w-8">y =</span>
+                            <span>0,05 × (Rp</span>
+                            <input type="text" class="border p-1 rounded w-32 bg-white focus:ring-emerald-500 focus:border-emerald-500 print:border-gray-400" placeholder="...">
+                            <span>) <span class="text-xs text-gray-500 italic font-sans">(Penghasilan Kena Pajak)</span></span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-8">y =</span>
+                            <span class="font-bold text-lg">Rp</span>
+                            <input type="text" class="border-b-2 border-gray-400 bg-transparent p-1 w-40 font-bold focus:outline-none focus:border-emerald-600 print:border-black" placeholder="Total Pajak PPh 21">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Analisis -->
+                <div class="pt-4 border-t border-gray-200 print:border-gray-300">
+                    <span class="font-bold text-gray-800 block mb-2 font-sans">3. Analisis (Critical Thinking):</span>
+                    <p class="text-gray-600 mb-2 font-sans print:text-black">Mengapa pemerintah menetapkan nilai c (Pengurang/PTKP) sebesar Rp 54 Juta? Apa yang terjadi jika c = 0 (Semua gaji dipajaki)?</p>
+                    <textarea class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-emerald-500 h-24 print:border-gray-400 font-sans" placeholder="Tuliskan analisismu tentang keadilan pajak di sini..."></textarea>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- AKTIVITAS 2: Saham & Total Return -->
+        <div class="bg-cyan-700 text-white p-4 rounded-t-2xl mt-12 print:bg-gray-800 print:text-white print-break-inside-avoid">
+            <h2 class="text-xl font-bold uppercase tracking-wide flex items-center gap-2">
+                <i data-lucide="bar-chart-2"></i> Aktivitas 2: Stock Analyst (Anatomi Keuntungan)
+            </h2>
+            <p class="text-cyan-100 print:text-gray-300 text-sm mt-1">Fokus Matematika: Persentase Keuntungan (Pecahan Senilai & Desimal)</p>
+        </div>
+
+        <section class="bg-white p-6 rounded-b-2xl shadow-sm border border-gray-100 mb-6 print-break-inside-avoid">
+            <p class="text-sm text-gray-700 mb-4 print:text-black">Banyak orang berpikir keuntungan saham HANYA dari kenaikan harga. Padahal, ada komponen kedua yang disebut <strong>Dividen</strong> (Bagi Hasil). Mari kita bedah anatomi keuntungan total!</p>
+
+            <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg mb-6 text-center print:bg-white print:border-gray-500">
+                <h4 class="font-bold text-slate-800 mb-1">Rumus Sakti Analis Saham:</h4>
+                <p class="text-sm font-mono text-cyan-800 font-bold bg-white inline-block px-4 py-2 rounded shadow-sm border print:text-black">Total Return = Capital Gain (Kenaikan Harga) + Dividend Yield (Bagi Hasil)</p>
+                <p class="text-xs text-gray-500 mt-2 italic">Analogi: Untung beli Sapi = Sapi tambah gemuk (Gain) + Susu yang diperah (Dividen).</p>
+            </div>
+
+            <div class="border-l-4 border-cyan-500 pl-4 mb-6 print:border-gray-600">
+                <h4 class="font-bold text-gray-800">Studi Kasus: PT Susu Sehat</h4>
+                <p class="text-sm text-gray-600 mt-1 print:text-black">Kamu membeli 1 lembar saham "PT Susu Sehat" seharga <strong>Rp 5.000</strong>. Satu tahun kemudian, kondisi pasarnya adalah:</p>
+                <ul class="list-disc pl-5 text-sm text-gray-600 mt-2 print:text-black">
+                    <li>Harga saham di pasar naik menjadi <strong>Rp 5.500</strong>.</li>
+                    <li>Perusahaan membagikan laba (dividen) tunai sebesar <strong>Rp 250</strong> per lembar.</li>
+                </ul>
+            </div>
+
+            <div class="mb-5 bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-yellow-800 font-medium flex gap-2 items-start print:border-gray-400 print:bg-white print:text-black">
+                <i data-lucide="pen-tool" class="w-5 h-5 flex-shrink-0"></i>
+                <p><strong>Arahan:</strong> Hitung persentase dari masing-masing komponen. Tulis proses perhitungannya di kertas!</p>
+            </div>
+
+            <h3 class="font-bold text-gray-800 mb-3 border-b pb-2">Tugas Analisis Saham:</h3>
+
+            <div class="space-y-6 text-sm">
+                <!-- Komponen 1 -->
+                <div class="bg-white border border-gray-200 p-4 rounded-xl shadow-sm print:border-gray-400">
+                    <h4 class="font-bold text-cyan-800 mb-3 flex items-center gap-2 print:text-black"><span class="bg-cyan-100 text-cyan-800 w-6 h-6 flex items-center justify-center rounded-full text-xs print:border print:border-black">1</span> Komponen 1: Capital Gain (Kenaikan Harga)</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 ml-8">
+                        <div>
+                            <span class="text-gray-500 font-medium inline-block mb-1">Keuntungan Rupiah:</span>
+                            <div class="flex items-center gap-2">
+                                <span>5.500 - 5.000 = Rp</span>
+                                <input type="text" class="border p-1.5 rounded w-24 print:border-gray-400 text-center font-bold" placeholder="...">
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-gray-500 font-medium inline-block mb-1">Persentase Gain:</span>
+                            <div class="flex items-center gap-2 bg-gray-50 p-2 rounded border print:bg-white">
+                                <span class="flex flex-col items-center">
+                                    <span class="border-b border-gray-500 px-2 text-xs">Untung Rp</span>
+                                    <span class="px-2 text-xs">Modal (5.000)</span>
+                                </span>
+                                <span>× 100% =</span>
+                                <input type="text" class="border p-1 rounded w-16 print:border-gray-400 text-center" placeholder="...">
+                                <span class="font-bold">%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Komponen 2 -->
+                <div class="bg-white border border-gray-200 p-4 rounded-xl shadow-sm print:border-gray-400">
+                    <h4 class="font-bold text-cyan-800 mb-3 flex items-center gap-2 print:text-black"><span class="bg-cyan-100 text-cyan-800 w-6 h-6 flex items-center justify-center rounded-full text-xs print:border print:border-black">2</span> Komponen 2: Dividend Yield (Bagi Hasil)</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 ml-8">
+                        <div>
+                            <span class="text-gray-500 font-medium inline-block mb-1">Keuntungan Rupiah:</span>
+                            <p class="font-bold text-base mt-1">Rp 250</p>
+                        </div>
+                        <div>
+                            <span class="text-gray-500 font-medium inline-block mb-1">Persentase Yield:</span>
+                            <div class="flex items-center gap-2 bg-gray-50 p-2 rounded border print:bg-white">
+                                <span class="flex flex-col items-center">
+                                    <span class="border-b border-gray-500 px-2 text-xs">Dividen (250)</span>
+                                    <span class="px-2 text-xs">Modal (5.000)</span>
+                                </span>
+                                <span>× 100% =</span>
+                                <input type="text" class="border p-1 rounded w-16 print:border-gray-400 text-center" placeholder="...">
+                                <span class="font-bold">%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Total Return -->
+                <div class="bg-cyan-50 border border-cyan-300 p-5 rounded-xl print:bg-white print:border-gray-500 ml-8 relative overflow-hidden">
+                    <div class="absolute right-0 top-0 opacity-10 print:hidden">
+                        <i data-lucide="trending-up" class="w-24 h-24"></i>
+                    </div>
+                    <h4 class="font-bold text-cyan-900 mb-2 relative z-10 print:text-black">3. Total Return (Keuntungan Total)</h4>
+                    <p class="text-gray-600 text-xs mb-3 relative z-10 print:text-black">Jumlahkan persentase Gain dan persentase Yield di atas.</p>
+                    <div class="flex items-center gap-2 text-lg relative z-10">
+                        <input type="text" class="border p-1.5 rounded w-16 text-center print:border-gray-400 bg-white" placeholder="% Gain">
+                        <span>% +</span>
+                        <input type="text" class="border p-1.5 rounded w-16 text-center print:border-gray-400 bg-white" placeholder="% Yield">
+                        <span>% =</span>
+                        <input type="text" class="border-b-2 border-gray-500 bg-transparent p-1 w-20 text-center font-bold focus:outline-none focus:border-cyan-600 print:border-black" placeholder="Total">
+                        <span class="font-bold">%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tantangan Berpikir Kritis -->
+            <div class="my-8 border-t-2 border-dashed border-gray-200"></div>
+
+            <h3 class="font-bold text-rose-700 mb-3 border-b pb-2 flex items-center gap-2 print:text-black">
+                <i data-lucide="alert-triangle" class="w-5 h-5"></i> Tantangan Berpikir Kritis (Problem Solving)
+            </h3>
+            
+            <div class="bg-rose-50 border border-rose-200 p-5 rounded-xl print:bg-white print:border-gray-500 text-sm">
+                <p class="text-gray-800 mb-4 font-medium print:text-black">Bagaimana jika harga saham "PT Susu Sehat" malah <strong>turun menjadi Rp 4.800</strong> di akhir tahun (Rugi Capital/Capital Loss), namun perusahaan tetap membagikan dividen <strong>Rp 250</strong>?</p>
+                
+                <div class="space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+                        <span class="w-full sm:w-48 text-gray-600">1. Persentase Rugi Harga (Loss):</span>
+                        <div class="flex flex-col gap-1">
+                            <span class="text-xs text-gray-500">(4.800 - 5.000) ÷ 5.000 × 100%</span>
+                            <div class="flex items-center"><input type="text" class="border p-1 rounded w-20 text-center print:border-gray-400 bg-white" placeholder="- ..."> <span class="ml-1 font-bold text-rose-600 print:text-black">%</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+                        <span class="w-full sm:w-48 text-gray-600">2. Persentase Dividen (Yield):</span>
+                        <div class="flex items-center"><input type="text" class="border p-1 rounded w-20 text-center print:border-gray-400 bg-white" placeholder="+ ..."> <span class="ml-1 font-bold text-green-600 print:text-black">% (Tetap sama seperti di atas)</span></div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-2 pt-2 border-t border-rose-200 print:border-gray-300">
+                        <span class="w-full sm:w-48 font-bold text-gray-800">3. Total Return Sekarang:</span>
+                        <div class="flex items-center">
+                            <input type="text" class="border p-1 rounded w-24 text-center font-bold print:border-gray-400 bg-white" placeholder="Total %">
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <label class="block font-medium mb-1">Kesimpulan:</label>
+                        <p class="text-xs text-gray-600 mb-2">Meskipun harga sahamnya turun, apakah secara total kamu masih mengalami keuntungan atau kerugian bersih? Jelaskan fungsi dividen menurutmu!</p>
+                        <textarea class="w-full border p-2 rounded-lg focus:ring-2 focus:ring-rose-500 h-20 print:border-gray-400 bg-white" placeholder="Tuliskan analisismu di sini..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pesan Finansial -->
+            <div class="mt-8 bg-gradient-to-r from-emerald-100 to-teal-100 border border-emerald-300 p-6 rounded-2xl print:bg-white print:border-black print:border-2 text-center md:text-left shadow-sm">
+                <h4 class="font-bold text-emerald-900 text-lg mb-2 uppercase tracking-wide flex items-center justify-center md:justify-start gap-2 print:text-black">
+                    <i data-lucide="award" class="text-emerald-600 print:text-black"></i> Pesan Wealth Manager
+                </h4>
+                <p class="text-emerald-800 text-sm leading-relaxed print:text-black">Membangun kekayaan sejati butuh keseimbangan. Penuhi <strong>Kewajibanmu (Obligations)</strong> seperti membayar pajak dengan jujur untuk negara, dan bangun <strong>Kekayaanmu (Wealth)</strong> dengan berinvestasi pada aset produktif yang tidak hanya naik harganya, tapi juga memberikan aliran dana segar (Dividen/Passive Income).</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Tombol Mengambang (Floating Action Button) untuk Cetak PDF -->
+    <button onclick="window.print()" class="no-print fixed bottom-6 right-6 bg-emerald-600 text-white px-5 py-3 rounded-full shadow-2xl hover:bg-emerald-700 font-bold flex items-center gap-2 z-50 transition transform hover:scale-105">
+        <i data-lucide="printer" class="w-5 h-5"></i> Simpan ke PDF / Cetak
+    </button>
+
+    <!-- Script Inisialisasi Ikon -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

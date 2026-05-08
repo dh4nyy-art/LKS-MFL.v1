@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKS Digital: Pertemuan 2 - Time & Money</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f5f3ff; } /* Latar belakang ungu muda */
+        
+        /* Pengaturan Khusus untuk Hasil Cetak (Print ke PDF) */
+        @media print {
+            body { background-color: #ffffff; }
+            .no-print { display: none !important; }
+            .shadow-sm, .shadow-lg { box-shadow: none !important; }
+            .border-gray-100 { border-color: #e5e7eb !important; border-width: 1px !important; }
+            input, textarea, select { 
+                border: 1px solid #9ca3af !important; 
+                background-color: transparent !important;
+                color: #000 !important;
+                -webkit-appearance: none;
+            }
+            .print-break-inside-avoid { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body class="text-gray-800 pb-20">
+
+    <!-- Header Navigation -->
+    <nav class="bg-indigo-600 text-white shadow-lg sticky top-0 z-50 no-print">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="/" class="hover:bg-indigo-700 p-2 rounded-lg transition-colors" title="Kembali ke Beranda">
+                    <i data-lucide="home" class="w-6 h-6"></i>
+                </a>
+                <h1 class="font-bold text-lg hidden sm:block">LKS Digital MFL - Fase D</h1>
+            </div>
+            <div class="text-sm font-medium bg-indigo-700 px-3 py-1 rounded-full flex items-center gap-2">
+                <i data-lucide="clock" class="w-4 h-4"></i> Pertemuan 2
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 mt-6 print:mt-0">
+        
+        <!-- Header Cetak Khusus Print -->
+        <div class="hidden print:block text-center mb-6 pb-4 border-b-2 border-gray-800">
+            <h1 class="text-2xl font-bold uppercase">Lembar Kerja Siswa (LKS) - Fase D</h1>
+            <h2 class="text-lg font-semibold text-gray-700">Matematika Terintegrasi Literasi Finansial (MFL)</h2>
+            <p class="text-sm text-gray-500">Pertemuan 2: Time & Money (Financial Planner)</p>
+        </div>
+
+        <!-- Identitas Siswa -->
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-8 print-break-inside-avoid">
+            <div class="flex flex-col md:flex-row justify-between md:items-center mb-4 gap-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 flex items-center gap-2">
+                        <i data-lucide="users" class="text-indigo-600"></i> Identitas Kelompok
+                    </h2>
+                    <p class="text-gray-500 text-sm mt-1">Misi: Financial Planner</p>
+                </div>
+                <div class="bg-indigo-50 text-indigo-800 text-xs px-3 py-2 rounded-lg border border-indigo-200 print:border-gray-400 print:bg-white print:text-black">
+                    <strong>Tujuan:</strong> Memahami simulasi KPR & dampak inflasi.
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Nama Anggota Kelompok:</label>
+                    <textarea class="w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border" rows="3" placeholder="1. ...&#10;2. ...&#10;3. ..."></textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Kelas:</label>
+                    <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border" placeholder="Contoh: VIII B">
+                </div>
+            </div>
+        </section>
+
+        <!-- AKTIVITAS 1: Dream Home -->
+        <div class="bg-indigo-600 text-white p-4 rounded-t-2xl mt-8 print:bg-gray-800 print:text-white print-break-inside-avoid">
+            <h2 class="text-xl font-bold uppercase tracking-wide flex items-center gap-2">
+                <i data-lucide="home"></i> Aktivitas 1: Dream Home (Simulasi KPR)
+            </h2>
+            <p class="text-indigo-100 print:text-gray-300 text-sm mt-1">Fokus Matematika: Aljabar (Pola Bilangan / Barisan Aritmatika)</p>
+        </div>
+
+        <section class="bg-white p-6 shadow-sm border border-gray-100 mb-6 rounded-b-2xl print-break-inside-avoid">
+            <p class="text-sm text-gray-700 mb-4 print:text-black">Keluarga Pak Budi ingin membeli "Rumah Idaman" seharga Rp 500.000.000. Pak Budi membayar DP (Uang Muka) sebesar Rp 100.000.000. Bank menawarkan KPR dengan Bunga Tetap (Flat Rate) 10% per tahun.</p>
+            
+            <!-- Box Info -->
+            <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6 flex items-start gap-4 print:bg-white print:border-gray-500">
+                <div class="bg-blue-100 p-3 rounded-full print:hidden">
+                    <i data-lucide="building" class="w-6 h-6 text-blue-700"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-blue-900 mb-1 print:text-black">Data Pinjaman:</h3>
+                    <ul class="text-sm text-blue-800 space-y-1 print:text-black">
+                        <li><strong>Harga Rumah:</strong> Rp 500.000.000</li>
+                        <li><strong>DP Dibayar:</strong> Rp 100.000.000</li>
+                        <li><strong>HUTANG POKOK (Plafond):</strong> Rp 400.000.000</li>
+                        <li><strong>Bunga Tetap (10% dari Pokok):</strong> Rp 40.000.000 / tahun</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mb-5 bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-yellow-800 font-medium flex gap-2 items-start print:border-gray-400 print:bg-white print:text-black">
+                <i data-lucide="pen-tool" class="w-5 h-5 flex-shrink-0"></i>
+                <p><strong>Arahan:</strong> Tuliskan proses perhitungannya di kertas! Rumus: Total Bayar = Hutang Pokok + (Bunga per tahun × Lama Pinjaman).</p>
+            </div>
+
+            <h3 class="font-bold text-gray-800 mb-3 border-b pb-2">Tugas 1: Temukan Pola Total Bayar</h3>
+            
+            <div class="space-y-4 text-sm bg-gray-50 p-5 rounded-lg border print:bg-white print:border-gray-400 mb-6">
+                <div class="flex flex-col md:flex-row md:items-center gap-2">
+                    <span class="font-medium w-full md:w-36">1. Mencicil 1 Tahun:</span>
+                    <span class="font-mono text-gray-600">400.000.000 + (40.000.000 × 1) =</span>
+                    <div class="flex items-center"><span class="font-bold mr-1">Rp</span><input type="text" class="border p-1.5 rounded w-32 bg-white print:border-gray-500" value="440.000.000" readonly></div>
+                </div>
+                <div class="flex flex-col md:flex-row md:items-center gap-2">
+                    <span class="font-medium w-full md:w-36">2. Mencicil 2 Tahun:</span>
+                    <span class="font-mono text-gray-600">400.000.000 + (40.000.000 × 2) =</span>
+                    <div class="flex items-center"><span class="font-bold mr-1">Rp</span><input type="text" class="border p-1.5 rounded w-32 bg-white focus:ring-indigo-500 focus:border-indigo-500 print:border-gray-500" placeholder="..."></div>
+                </div>
+                <div class="flex flex-col md:flex-row md:items-center gap-2">
+                    <span class="font-medium w-full md:w-36">3. Mencicil 3 Tahun:</span>
+                    <span class="font-mono text-gray-600">400.000.000 + (40.000.000 × 3) =</span>
+                    <div class="flex items-center"><span class="font-bold mr-1">Rp</span><input type="text" class="border p-1.5 rounded w-32 bg-white focus:ring-indigo-500 focus:border-indigo-500 print:border-gray-500" placeholder="..."></div>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <div>
+                    <label class="block font-medium mb-1 text-sm">4. Analisis Pola Bilangan: Perhatikan kenaikan Total Bayar setiap tahunnya. Apakah kenaikannya selalu sama (tetap)?</label>
+                    <select class="border p-2 rounded w-full md:w-1/3 text-sm print:appearance-none print:border-gray-400">
+                        <option value="">-- Pilih Jawaban --</option>
+                        <option value="Ya">Ya, kenaikannya selalu tetap (Barisan Aritmatika)</option>
+                        <option value="Tidak">Tidak, kenaikannya berubah-ubah</option>
+                    </select>
+                </div>
+                
+                <div class="pt-2">
+                    <label class="block font-medium mb-2 text-sm">5. Prediksi Tenor Panjang (10 vs 20 Tahun):</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="border p-4 rounded-lg bg-white print:border-gray-400 shadow-sm">
+                            <span class="block font-bold text-indigo-700 mb-2 print:text-black">Tenor 10 Tahun</span>
+                            <span class="text-xs text-gray-500 mb-2 block">400 jt + (40 jt × 10)</span>
+                            <div class="flex items-center"><span class="font-bold mr-1">Rp</span><input type="text" class="border p-2 rounded w-full print:border-gray-400" placeholder="..."></div>
+                        </div>
+                        <div class="border p-4 rounded-lg bg-white print:border-gray-400 shadow-sm">
+                            <span class="block font-bold text-rose-700 mb-2 print:text-black">Tenor 20 Tahun</span>
+                            <span class="text-xs text-gray-500 mb-2 block">400 jt + (40 jt × 20)</span>
+                            <div class="flex items-center"><span class="font-bold mr-1">Rp</span><input type="text" class="border p-2 rounded w-full print:border-gray-400" placeholder="..."></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-indigo-50 p-4 border border-indigo-200 rounded-lg mt-4 print:bg-white print:border-gray-800">
+                    <label class="block font-bold text-indigo-900 mb-2 print:text-black">Refleksi KPR:</label>
+                    <p class="text-sm mb-2">Berapa selisih uang yang dibayarkan antara mengambil tenor 10 tahun dan 20 tahun?</p>
+                    <div class="flex items-center"><span class="font-bold mr-2 text-lg">Rp</span><input type="text" class="border-b-2 border-gray-400 bg-transparent p-1 w-full md:w-1/2 font-bold focus:outline-none focus:border-indigo-600 print:border-black" placeholder="..."></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- AKTIVITAS 2: Inflation Trap -->
+        <div class="bg-rose-600 text-white p-4 rounded-t-2xl mt-12 print:bg-gray-800 print:text-white print-break-inside-avoid">
+            <h2 class="text-xl font-bold uppercase tracking-wide flex items-center gap-2">
+                <i data-lucide="trending-up"></i> Aktivitas 2: Inflation Trap (Jebakan Inflasi)
+            </h2>
+            <p class="text-rose-100 print:text-gray-300 text-sm mt-1">Fokus Matematika: Bilangan (Perpangkatan Sederhana). Memecahkan masalah "uang menyusut" secara logis.</p>
+        </div>
+
+        <section class="bg-white p-6 rounded-b-2xl shadow-sm border border-gray-100 mb-6 print-break-inside-avoid">
+            <p class="text-sm text-gray-700 mb-4 print:text-black">Kamu bermimpi membeli <strong>Laptop Gaming High-End</strong>. Harga saat ini adalah <strong>Rp 15.000.000</strong>. Kamu memutuskan untuk menabung dulu selama 3 tahun.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div class="border-2 border-green-200 bg-green-50 p-4 rounded-xl print:bg-white print:border-gray-500">
+                    <h4 class="font-bold text-green-700 mb-2 flex items-center gap-2 print:text-black"><i data-lucide="piggy-bank" class="w-5 h-5"></i> REALITA 1: Tabunganmu</h4>
+                    <p class="text-sm text-gray-600 print:text-black">Kamu menabung uang tunai di celengan rumah sebesar <strong class="text-black">Rp 5.000.000</strong> setiap tahun.</p>
+                </div>
+                <div class="border-2 border-red-200 bg-red-50 p-4 rounded-xl print:bg-white print:border-gray-500">
+                    <h4 class="font-bold text-red-700 mb-2 flex items-center gap-2 print:text-black"><i data-lucide="flame" class="w-5 h-5"></i> REALITA 2: Harga Barang (Inflasi)</h4>
+                    <p class="text-sm text-gray-600 print:text-black">Harga Laptop naik rata-rata <strong class="text-black">10%</strong> setiap tahun karena inflasi komponen elektronik.</p>
+                </div>
+            </div>
+
+            <div class="mb-5 bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-yellow-800 font-medium flex gap-2 items-start print:border-gray-400 print:bg-white print:text-black">
+                <i data-lucide="pen-tool" class="w-5 h-5 flex-shrink-0"></i>
+                <p><strong>Arahan:</strong> Mari kita hitung manual tahun demi tahun untuk melihat siapa yang menang. Tulis oret-oretannya di kertas!</p>
+            </div>
+
+            <h3 class="font-bold text-gray-800 mb-3 border-b pb-2">Tugas 2.1: Balapan Value Uang vs Harga</h3>
+
+            <div class="space-y-6 text-sm">
+                <!-- Tahun 1 -->
+                <div class="border-l-4 border-gray-300 pl-4 py-2 print:border-gray-500">
+                    <h4 class="font-bold text-base mb-2">1. Akhir Tahun ke-1:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <span class="text-gray-500 font-medium inline-block mb-1">Tabunganmu:</span>
+                            <p class="bg-gray-50 p-2 rounded border print:bg-white">1 × 5.000.000 = <span class="font-bold">Rp 5.000.000</span></p>
+                        </div>
+                        <div>
+                            <span class="text-gray-500 font-medium inline-block mb-1">Harga Laptop (Naik 10%):</span>
+                            <p class="bg-gray-50 p-2 rounded border print:bg-white text-xs md:text-sm">15.000.000 + (10% × 15.000.000) <br>= 15.000.000 + 1.500.000 = <span class="font-bold">Rp 16.500.000</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tahun 2 -->
+                <div class="border-l-4 border-gray-300 pl-4 py-2 print:border-gray-500">
+                    <h4 class="font-bold text-base mb-2">2. Akhir Tahun ke-2:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <span class="text-gray-500 font-medium inline-block mb-1">Tabunganmu:</span>
+                            <p class="bg-gray-50 p-2 rounded border print:bg-white">2 × 5.000.000 = <span class="font-bold">Rp 10.000.000</span></p>
+                        </div>
+                        <div>
+                            <span class="text-gray-500 font-medium inline-block mb-1">Harga Laptop (Naik 10% dr thn lalu):</span>
+                            <div class="bg-gray-50 p-2 rounded border print:bg-white flex flex-col gap-1">
+                                <span class="text-xs text-gray-500">16.500.000 + (10% × 16.500.000) = 16.500.000 + 1.650.000</span>
+                                <div class="flex items-center"><span class="font-bold mr-1">= Rp</span><input type="text" class="border p-1 rounded w-32 print:border-gray-400" placeholder="..."></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tahun 3 -->
+                <div class="border-l-4 border-gray-300 pl-4 py-2 print:border-gray-500">
+                    <h4 class="font-bold text-base mb-2">3. Akhir Tahun ke-3 (Target Pembelian):</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <span class="text-gray-500 font-medium inline-block mb-1">Tabunganmu:</span>
+                            <p class="bg-green-50 text-green-800 p-2 rounded border border-green-200 print:bg-white print:border-gray-400">3 × 5.000.000 = <span class="font-bold text-base">Rp 15.000.000</span> <br><span class="text-xs">(Hore! Sesuai harga awal)</span></p>
+                        </div>
+                        <div>
+                            <span class="text-gray-500 font-medium inline-block mb-1">Harga Laptop (Naik 10% dr thn ke-2):</span>
+                            <div class="bg-red-50 text-red-800 p-2 rounded border border-red-200 print:bg-white print:border-gray-400 flex flex-col gap-1">
+                                <span class="text-xs text-gray-500">(Harga Th 2) + (10% × Harga Th 2)</span>
+                                <div class="flex items-center"><span class="font-bold mr-1">= Rp</span><input type="text" class="border p-1 rounded w-32 print:border-gray-400 bg-white" placeholder="..."></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kesimpulan -->
+                <div class="bg-rose-50 border border-rose-200 p-5 rounded-xl print:bg-white print:border-gray-500 mt-4">
+                    <h4 class="font-bold text-rose-800 mb-3 print:text-black">4. Kesimpulan Pahit (The Trap):</h4>
+                    <ul class="list-disc pl-5 space-y-2 mb-4 text-rose-900 print:text-black">
+                        <li>Uang di tangan: <strong>Rp 15.000.000</strong></li>
+                        <li class="flex items-center gap-2">Harga Barang Sekarang: <strong>Rp</strong> <input type="text" class="border p-1 rounded w-32 bg-white text-sm print:border-gray-400" placeholder="..."></li>
+                    </ul>
+                    <div class="flex items-center gap-3">
+                        <span class="font-medium">Apakah kamu bisa membeli laptop itu?</span>
+                        <select class="border border-rose-300 p-2 rounded w-32 text-sm print:appearance-none print:border-gray-400 bg-white">
+                            <option value="">-- Pilih --</option>
+                            <option value="Ya">Ya</option>
+                            <option value="Tidak">Tidak</option>
+                        </select>
+                    </div>
+                    <p class="text-xs text-rose-600 mt-3 print:text-gray-600 italic">Apa yang terjadi? Kamu terkena "Jebakan Inflasi". Nominal uangmu tercapai, tapi nilainya sudah tidak cukup.</p>
+                </div>
+            </div>
+
+            <div class="my-8 border-t-2 border-dashed border-gray-200"></div>
+
+            <h3 class="font-bold text-gray-800 mb-3">Tugas 2.2: Solusi Anti-Inflasi (Investasi)</h3>
+            <p class="text-sm text-gray-700 mb-4">Bagaimana jika uang Rp 15.000.000 itu tidak kamu simpan di celengan, tapi kamu belikan <strong>Emas</strong> sejak awal? (Asumsi kenaikan harga emas rata-rata 12% per tahun, lebih tinggi dari inflasi laptop 10%).</p>
+            
+            <div class="bg-gray-50 p-4 rounded-lg border mb-4 text-sm print:bg-white print:border-gray-400">
+                <ul class="space-y-2 text-center md:text-left">
+                    <li>Harga Laptop naik dengan pengali <strong class="bg-white px-2 py-1 border rounded shadow-sm">1,1</strong> (10%) setiap tahun.</li>
+                    <li>Nilai Emas naik dengan pengali <strong class="bg-white px-2 py-1 border rounded shadow-sm">1,12</strong> (12%) setiap tahun.</li>
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-sm font-medium mb-2">Secara logika matematika, tanpa menghitung detail, pengali mana yang akan menghasilkan angka lebih besar di tahun ke-3?</label>
+                <input type="text" class="border p-2 rounded w-full md:w-1/2 print:border-gray-400" placeholder="Tulis jawabanmu (Pengali Laptop atau Pengali Emas)...">
+            </div>
+
+            <!-- Tugas 2.3: Problem Solving Akhir -->
+            <div class="my-8 border-t-2 border-dashed border-gray-200"></div>
+
+            <h3 class="font-bold text-gray-800 mb-3 border-b pb-2">Tugas 2.3: Problem Solving Akhir (Kredit vs Menabung)</h3>
+            <p class="text-sm text-gray-700 mb-4 print:text-black">Kakakmu ingin membeli sepeda motor seharga <strong>Rp 20.000.000</strong>. Dia memiliki dua pilihan cara mendapatkan motor tersebut. Bantu kakakmu membuat keputusan finansial yang paling bijak!</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 text-sm">
+                <div class="border p-4 rounded-xl bg-blue-50 print:bg-white print:border-gray-500 shadow-sm">
+                    <h4 class="font-bold text-blue-800 mb-2 flex items-center gap-2 print:text-black"><i data-lucide="shopping-bag" class="w-4 h-4"></i> Opsi 1: Beli Kredit (Sekarang)</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-gray-700 print:text-black">
+                        <li>Motor langsung dibawa pulang hari ini.</li>
+                        <li>Tanpa DP (Uang Muka Rp 0).</li>
+                        <li>Cicilan: <strong>Rp 1.000.000 / bulan</strong> selama 2 tahun (24 bulan).</li>
+                    </ul>
+                </div>
+                <div class="border p-4 rounded-xl bg-emerald-50 print:bg-white print:border-gray-500 shadow-sm">
+                    <h4 class="font-bold text-emerald-800 mb-2 flex items-center gap-2 print:text-black"><i data-lucide="wallet" class="w-4 h-4"></i> Opsi 2: Sabar Menabung</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-gray-700 print:text-black">
+                        <li>Menabung rutin <strong>Rp 1.000.000 / bulan</strong> selama 24 bulan di tabungan.</li>
+                        <li>Inflasi: Harga motor diprediksi naik konstan <strong>5% per tahun</strong>.</li>
+                        <li>Beli motornya 2 tahun lagi secara tunai menggunakan hasil tabungan.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mb-5 bg-yellow-50 border-l-4 border-yellow-400 p-3 text-sm text-yellow-800 font-medium flex gap-2 items-start print:border-gray-400 print:bg-white print:text-black">
+                <i data-lucide="pen-tool" class="w-5 h-5 flex-shrink-0"></i>
+                <p><strong>Arahan:</strong> Hitung total pengeluaran Opsi 1, dan hitung prediksi harga motor di Opsi 2 pada akhir tahun ke-2. Tulis langkah penyelesaianmu di kertas buram!</p>
+            </div>
+
+            <div class="space-y-5 text-sm bg-gray-50 p-5 rounded-lg border print:bg-white print:border-gray-400 mb-8">
+                <div>
+                    <label class="block font-medium mb-1">1. Total uang yang harus dibayar jika memilih Opsi 1 (Kredit):</label>
+                    <div class="flex items-center gap-2"><span class="font-bold">Rp</span><input type="text" class="border p-2 rounded w-full md:w-1/3 print:border-gray-400" placeholder="Hasil perhitungan..."></div>
+                </div>
+                <div>
+                    <label class="block font-medium mb-1">2. Prediksi Harga Motor di Opsi 2 (Akhir Tahun ke-2):</label>
+                    <p class="text-xs text-gray-500 mb-2 print:text-black">Petunjuk: Hitung kenaikan 5% di tahun 1, lalu tambahkan ke harga awal. Kemudian hitung lagi kenaikan 5% di tahun 2 berdasarkan harga tahun 1 tersebut.</p>
+                    <div class="flex items-center gap-2"><span class="font-bold">Rp</span><input type="text" class="border p-2 rounded w-full md:w-1/3 print:border-gray-400" placeholder="Hasil perhitungan..."></div>
+                </div>
+                <div class="pt-3 border-t border-gray-200 print:border-gray-400">
+                    <label class="block font-bold text-gray-800 mb-2 mt-1 text-base">3. Keputusan Final (Kemampuan Argumentasi):</label>
+                    <p class="text-gray-600 mb-2 print:text-black">Setelah membandingkan total biaya yang dikeluarkan dengan waktu menunggu, opsi mana yang kamu rekomendasikan untuk kakakmu? Jelaskan alasan logisnya!</p>
+                    <textarea class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-indigo-500 h-28 print:border-gray-400" placeholder="Tuliskan rekomendasi dan argumen finansialmu di sini..."></textarea>
+                </div>
+            </div>
+
+            <!-- Pesan Finansial -->
+            <div class="bg-gradient-to-r from-amber-100 to-yellow-100 border border-amber-300 p-6 rounded-2xl print:bg-white print:border-black print:border-2 text-center md:text-left shadow-sm">
+                <h4 class="font-bold text-amber-900 text-lg mb-2 uppercase tracking-wide flex items-center justify-center md:justify-start gap-2 print:text-black">
+                    <i data-lucide="lightbulb" class="text-amber-600 print:text-black"></i> Pesan Finansial
+                </h4>
+                <p class="text-amber-800 text-sm leading-relaxed print:text-black">Menabung uang tunai di rumah (Celengan) aman untuk jangka pendek, tapi <strong>BERISIKO TINGGI</strong> untuk jangka panjang karena termakan inflasi. <br><br><strong>Solusi:</strong> Simpanlah dalam bentuk aset yang nilainya tumbuh (Emas, Tanah, Saham) → Ini yang disebut <strong>INVESTASI</strong>.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Tombol Mengambang (Floating Action Button) untuk Cetak PDF -->
+    <button onclick="window.print()" class="no-print fixed bottom-6 right-6 bg-indigo-600 text-white px-5 py-3 rounded-full shadow-2xl hover:bg-indigo-700 font-bold flex items-center gap-2 z-50 transition transform hover:scale-105">
+        <i data-lucide="printer" class="w-5 h-5"></i> Simpan ke PDF / Cetak
+    </button>
+
+    <!-- Script Inisialisasi Ikon -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
